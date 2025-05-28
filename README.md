@@ -18,5 +18,6 @@ This task reinforces the intern’s understanding of the data pipeline concept a
 
 In summary, Task 1 is designed to equip interns with the foundational skills to build data pipelines, a crucial step in any data-driven project. The focus on automation, code clarity, and use of industry-
 standard libraries ensures that interns are working in alignment with best practices used by professionals. Successfully completing this task will not only contribute to the intern's technical portfolio but also fulfill an essential milestone in the CodTech internship program, culminating in a completion certificate upon finishing all required tasks.
-output:![Image](https://github.com/user-attachments/assets/51b535a3-87b8-41d2-b65e-5ac58ff5f2d1)
+output:![Screenshot (1)](https://github.com/user-attachments/assets/d20dac22-e053-433a-aaba-cfe1d00217a1)
+
 
