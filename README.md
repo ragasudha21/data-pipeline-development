@@ -16,6 +16,7 @@ The deliverable for this task is a Python script or a Jupyter Notebook that auto
 
 This task reinforces the intern’s understanding of the data pipeline concept and prepares them for more complex data engineering and modeling challenges in the later stages of the internship. By completing this task, participants will improve their programming, data wrangling, and logical thinking skills, which are critical for any aspiring data scientist or analyst.
 
-In summary, Task 1 is designed to equip interns with the foundational skills to build data pipelines, a crucial step in any data-driven project. The focus on automation, code clarity, and use of industry-standard libraries ensures that interns are working in alignment with best practices used by professionals. Successfully completing this task will not only contribute to the intern's technical portfolio but also fulfill an essential milestone in the CodTech internship program, culminating in a completion certificate upon finishing all required tasks.
-
+In summary, Task 1 is designed to equip interns with the foundational skills to build data pipelines, a crucial step in any data-driven project. The focus on automation, code clarity, and use of industry-
+standard libraries ensures that interns are working in alignment with best practices used by professionals. Successfully completing this task will not only contribute to the intern's technical portfolio but also fulfill an essential milestone in the CodTech internship program, culminating in a completion certificate upon finishing all required tasks.
+output:![Image](https://github.com/user-attachments/assets/51b535a3-87b8-41d2-b65e-5ac58ff5f2d1)
 
