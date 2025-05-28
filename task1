@@ -1,0 +1,55 @@
+import pandas as pd
+df = pd.read_csv('products-100.csv')
+
+numerical_features = ['Price', 'Stock']
+categorical_features = ['Brand', 'Category', 'Currency', 'Color', 'Size', 'Availability']
+
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+
+numeric_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='mean')),
+    ('scaler', StandardScaler())
+])
+
+
+categorical_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='most_frequent')),
+    ('encoder', OneHotEncoder(handle_unknown='ignore'))
+])
+
+
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', numeric_transformer, numerical_features),
+        ('cat', categorical_transformer, categorical_features)
+    ]
+)
+
+print(df.columns.tolist())
+
+df.columns = df.columns.str.strip()
+
+print(df.columns.tolist())  
+
+processed_data = preprocessor.fit_transform(df)
+
+
+if hasattr(processed_data, "toarray"):
+    processed_data = processed_data.toarray()
+
+
+numeric_cols = numerical_features
+cat_cols = preprocessor.named_transformers_['cat']['encoder'].get_feature_names_out(categorical_features)
+
+
+all_cols = list(numeric_cols) + list(cat_cols)
+
+processed_df = pd.DataFrame(processed_data, columns=all_cols)
+
+
+processed_df.to_csv('processed_industry.csv', index=False)
+
+print("Data saved with name'processed_industry.csv'")
